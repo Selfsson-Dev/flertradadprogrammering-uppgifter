@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace LoanManagementSys;
+﻿namespace LoanManagementSys;
 
 /// <summary>
 /// Class that represents a loan item.  Each loan item has an object of the
@@ -30,7 +25,7 @@ public class LoanItem
         get { return product; }
         set { product = value; }
     }
-   
+
     public Member Member
     {
         get { return member; }
@@ -41,7 +36,7 @@ public class LoanItem
     //object's values.
     public override String ToString()
     {
-        string? memberStr = (member != null) ? "Loaned to  " + member.ToString() :  string.Empty;
+        string? memberStr = (member != null) ? "Loaned to  " + member.ToString() : string.Empty;
         return $"{product.ToString()} {memberStr}";
     }
 }

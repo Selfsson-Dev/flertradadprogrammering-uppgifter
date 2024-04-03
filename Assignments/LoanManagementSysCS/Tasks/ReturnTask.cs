@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Metrics;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
-using LoanManagementSys.Managers;
+﻿using LoanManagementSys.Managers;
 
 namespace LoanManagementSys.Tasks
 {
@@ -27,7 +19,7 @@ namespace LoanManagementSys.Tasks
         public bool IsRunning { get; set; } = true;
 
 
-        public ReturnTask(LoanSystemManager loanSystemManager) 
+        public ReturnTask(LoanSystemManager loanSystemManager)
         {
             this.loanSystemManager = loanSystemManager;
             random = new Random();
@@ -45,21 +37,13 @@ namespace LoanManagementSys.Tasks
 
         public void Run()
         {
-            while (Thread.CurrentThread.IsAlive)
+            while (IsRunning)
             {
-                if (IsRunning)
+                if (!loanSystemManager.LoanItemManager.NoItemsLoaned())
                 {
-                    if (!loanSystemManager.LoanItemManager.NoItemsLoaned())
-                    {
-                        ReturnRandomLoanedItem();
-                    }
-                    Thread.Sleep(random.Next(3000, 15001));
+                    ReturnRandomLoanedItem();
                 }
-                else
-                {
-                    Console.WriteLine($"Thread: {Thread.CurrentThread.ManagedThreadId} is waiting for work");
-                    Thread.Sleep(150);
-                }
+                Thread.Sleep(random.Next(3000, 15001));
             }
         }
     }

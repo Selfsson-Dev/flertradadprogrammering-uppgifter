@@ -1,12 +1,4 @@
 ﻿using LoanManagementSys.Managers;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics.Metrics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace LoanManagementSys.Tasks
 {
@@ -47,20 +39,12 @@ namespace LoanManagementSys.Tasks
 
         public void Run()
         {
-            while (Thread.CurrentThread.IsAlive)
+            while (IsRunning)
             {
-                if (IsRunning)
+                if (!loanSystemManager.ProductManager.NoProductsAvailable())
                 {
-                    if (!loanSystemManager.ProductManager.NoProductsAvailable())
-                    {
-                        CreateRandomLoan();
-                        Thread.Sleep(random.Next(2000, 6001));
-                    }
-                }
-                else
-                {
-                    Console.WriteLine($"Thread: {Thread.CurrentThread.ManagedThreadId} is waiting for work");
-                    Thread.Sleep(150);
+                    CreateRandomLoan();
+                    Thread.Sleep(random.Next(2000, 6001));
                 }
             }
         }

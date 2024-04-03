@@ -1,25 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LoanManagementSys.Managers
+﻿namespace LoanManagementSys.Managers
 {
-    public class MemberManager : GenericManager <Member>
+    public class MemberManager : GenericManager<Member>
     {
         public List<Member> membersList = new();
         private int memberId = 1;
 
-        public MemberManager() 
+        public MemberManager()
         {
             membersList = new List<Member>();
             CreateTestMembers();
         }
 
         // Fill membersList with random members
-        private void CreateTestMembers()    
+        private void CreateTestMembers()
         {
             for (int i = 0; i < 15; i++)
             {

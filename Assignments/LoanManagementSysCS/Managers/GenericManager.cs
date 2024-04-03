@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LoanManagementSys.Managers
+﻿namespace LoanManagementSys.Managers
 {
     /// <summary>
     /// Generic manager handling object interactions
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class GenericManager <T>
+    public class GenericManager<T>
     {
         /// <summary>
         /// AddProduct an object to a specified list
@@ -22,7 +16,7 @@ namespace LoanManagementSys.Managers
             if (obj == null)
             {
                 return;
-            } 
+            }
             objList.Add(obj);
         }
 

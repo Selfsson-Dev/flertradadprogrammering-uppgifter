@@ -1,9 +1,4 @@
 ﻿using LoanManagementSys.Managers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LoanManagementSys
 {
@@ -15,8 +10,8 @@ namespace LoanManagementSys
     ///product is removed from this list and placed in the LoanItenmList,
     ///and when returned, the object is added to the list again.
     /// </summary>
-    
-    public class ProductManager : GenericManager <Product>
+
+    public class ProductManager : GenericManager<Product>
     {
         public List<Product> productsList = new();
 
@@ -27,26 +22,10 @@ namespace LoanManagementSys
         private int lastProductID = 100;
 
         /// Returns a product at a position = index in the list
-        public ProductManager() 
+        public ProductManager()
         {
             AddTestProducts();
         }
-
-        //public Product? GetProduct(int index)
-        //{
-        //    return base.Get(index, productsList);
-        //}
-
-        //public void AddProduct(Product product)
-        //{
-        //    base.Add(product, productsList);
-        //}
-
-        /// Removes a specific product from the list
-        //public void RemoveProductAvailability(Product product)
-        //{
-        //    base.Remove(product, productsList);
-        //}
 
         //Fill the list with some test objects.
         private void AddTestProducts()

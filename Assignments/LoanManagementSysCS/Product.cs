@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace LoanManagementSys;
+﻿namespace LoanManagementSys;
 
 
 //Stores and handles data about a product (equipment) that

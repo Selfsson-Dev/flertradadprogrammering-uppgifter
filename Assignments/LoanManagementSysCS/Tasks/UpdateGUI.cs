@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LoanManagementSys.Managers;
+﻿using LoanManagementSys.Managers;
 
 namespace LoanManagementSys;
 
@@ -22,18 +17,10 @@ public class UpdateGUI
 
     public void Run()
     {
-        while (Thread.CurrentThread.IsAlive)
+        while (IsRunning)
         {
-            if (IsRunning)
-            {
-                loanSys.UpdateAllItems();
-                Thread.Sleep(2000);
-            }
-            else
-            {
-                Console.WriteLine($"Thread: {Thread.CurrentThread.ManagedThreadId} is waiting for work");
-                Thread.Sleep(150);
-            }
+            loanSys.UpdateAllItems();
+            Thread.Sleep(2000);
         }
     }
 }

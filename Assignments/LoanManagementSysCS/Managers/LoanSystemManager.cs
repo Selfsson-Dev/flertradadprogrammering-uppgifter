@@ -1,6 +1,5 @@
 ﻿
 using LoanManagementSys.Tasks;
-using System.Security.AccessControl;
 
 namespace LoanManagementSys.Managers
 {
@@ -18,28 +17,25 @@ namespace LoanManagementSys.Managers
         private ListBox listItems;
         private ListBox listOutput;
 
-        private List<Thread> threadList = new List<Thread>();
+        private Thread? loanThread;
+        private Thread? returnThread;
+        private Thread? adminThread;
+        private Thread? guiThread;
 
         public LoanSystemManager(ListBox listItems, ListBox listOutput)
         {
             this.listItems = listItems;
             this.listOutput = listOutput;
 
+            CreateTasks();
+        }
+
+        private void CreateTasks()
+        {
             adminTask = new(this);
             loanTask = new(this);
             returnTask = new(this);
             updateGUI = new(this);
-
-            CreateThreads();
-        }
-
-        // ta bort isrunning
-        public void CreateThreads()
-        {
-            threadList.Add(new Thread(adminTask.Run));
-            threadList.Add(new Thread(loanTask.Run));
-            threadList.Add(new Thread(returnTask.Run));
-            threadList.Add(new Thread(updateGUI.Run));
         }
 
         /// <summary>
@@ -73,7 +69,7 @@ namespace LoanManagementSys.Managers
             {
                 itemList.Add(loanedItem.Product.ToString());
             }
-            
+
             itemList.Add($"Number of products available: {ProductManager.productsList.Count}");
 
             foreach (var product in ProductManager.productsList)
@@ -95,37 +91,58 @@ namespace LoanManagementSys.Managers
                 listOutput.Items.Add(eventMessage);
             }
         }
+        private void CreateThreads()
+        {
+            adminThread = new Thread(adminTask.Run);
+            loanThread = new Thread(loanTask.Run);
+            returnThread = new Thread(returnTask.Run);
+            guiThread = new Thread(updateGUI.Run);
+        }
+
+        private void StartThreads()
+        {
+            adminThread.Start();
+            loanThread.Start();
+            returnThread.Start();
+            guiThread.Start();
+        }
 
         public void Start()
         {
-            adminTask.IsRunning = true;
-            loanTask.IsRunning = true;
-            returnTask.IsRunning = true;
-            updateGUI.IsRunning = true;
-
-            foreach (var thread in threadList)
+            if ((loanThread != null) && (returnThread != null) && (adminThread != null) && (guiThread != null))
             {
-                try
+                if (loanThread.IsAlive && adminThread.IsAlive && returnThread.IsAlive && guiThread.IsAlive)
                 {
-                    if (!thread.IsAlive)
-                    {
-                        thread.Start();
-                    }
-                }
-                catch (ThreadStateException e)
-                {
-                    Console.WriteLine("Caught: {0}", e.Message);
+                    adminTask.IsRunning = true;
+                    loanTask.IsRunning = true;
+                    returnTask.IsRunning = true;
+                    updateGUI.IsRunning = true;
+                    return;
                 }
             }
+
+            CreateTasks();
+            CreateThreads();
+            StartThreads();
         }
 
-        // pause all tasks
+        // stop all tasks
         public void Stop()
         {
-            adminTask.IsRunning = false;
-            loanTask.IsRunning = false;
-            returnTask.IsRunning = false;
-            updateGUI.IsRunning = false;
+            try
+            {
+                adminTask.IsRunning = false;
+                loanTask.IsRunning = false;
+                returnTask.IsRunning = false;
+                updateGUI.IsRunning = false;
+            }
+            finally
+            {
+                loanThread = null;
+                returnThread = null;
+                guiThread = null;
+                adminThread = null;
+            }
         }
     }
 }

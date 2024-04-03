@@ -1,11 +1,4 @@
 ﻿using LoanManagementSys.Managers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace LoanManagementSys.Tasks
 {
@@ -18,7 +11,7 @@ namespace LoanManagementSys.Tasks
 
         public bool IsRunning { get; set; } = true;
 
-        public AdminTask(LoanSystemManager loanSystemManager) 
+        public AdminTask(LoanSystemManager loanSystemManager)
         {
             random = new Random();
             this.loanSystemManager = loanSystemManager;
@@ -32,18 +25,10 @@ namespace LoanManagementSys.Tasks
 
         public void Run()
         {
-            while (Thread.CurrentThread.IsAlive)
+            while (IsRunning)
             {
-                if (IsRunning)
-                {
-                    CreateNewProduct();
-                    Thread.Sleep(random.Next(6000, 16001));
-                }
-                else
-                {
-                    Console.WriteLine($"Thread: {Thread.CurrentThread.ManagedThreadId} is waiting for work");
-                    Thread.Sleep(150);
-                }
+                CreateNewProduct();
+                Thread.Sleep(random.Next(6000, 16001));
             }
         }
     }

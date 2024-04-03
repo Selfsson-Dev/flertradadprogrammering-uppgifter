@@ -1,6 +1,6 @@
 ﻿namespace LoanManagementSys.Managers
 {
-    public class LoanItemManager : GenericManager <LoanItem>
+    public class LoanItemManager : GenericManager<LoanItem>
     {
         public List<LoanItem> LoanedItemList { get; set; } = new();
 
