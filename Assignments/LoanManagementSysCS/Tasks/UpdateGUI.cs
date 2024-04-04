@@ -4,7 +4,6 @@ namespace LoanManagementSys;
 
 public class UpdateGUI
 {
-    private Random random;
     private LoanSystemManager loanSys;
 
     public bool IsRunning { get; set; } = true;
@@ -12,7 +11,6 @@ public class UpdateGUI
     public UpdateGUI(LoanSystemManager loanSys)
     {
         this.loanSys = loanSys;
-        random = new Random();
     }
 
     public void Run()

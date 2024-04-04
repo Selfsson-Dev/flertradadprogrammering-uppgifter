@@ -50,6 +50,11 @@
                 return default;
         }
 
+        /// <summary>
+        /// Gets random object from list
+        /// </summary>
+        /// <param name="objList"></param>
+        /// <returns></returns>
         public virtual T? GetRandom(List<T> objList)
         {
             Random rnd = new Random();
