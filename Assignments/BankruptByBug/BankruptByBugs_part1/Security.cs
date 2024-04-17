@@ -9,7 +9,8 @@ namespace BankruptByBugs_part1
     public class Security
     {
         private List<Stamp> transactionHistory = new();
-        private int numberOfErrors;
+        public int numberOfErrors;
+        private object transactionLock = new();
 
         /// <summary>
         /// Creates a transaction record and stores it in the transaction history for a specific client.
@@ -24,7 +25,10 @@ namespace BankruptByBugs_part1
 
         public void MakePreTransactionStamp(double balance, int clientId)
         {
-            transactionHistory.Add(new Stamp(balance, clientId));
+            lock (transactionLock)
+            {
+                transactionHistory.Add(new Stamp(balance, clientId));
+            }
         }
 
         /// <summary>
@@ -40,7 +44,10 @@ namespace BankruptByBugs_part1
 
         public void MakePostTransactionsStamp(double balance, int clientId) 
         {
-            transactionHistory.Add(new Stamp(balance, clientId));
+            lock (transactionLock)
+            {
+                transactionHistory.Add(new Stamp(balance, clientId));
+            }
         }
 
 
@@ -58,18 +65,19 @@ namespace BankruptByBugs_part1
         /// </summary>
         /// <param name="amount">The transaction amount.</param>
         /// <param name="clientId">The client identifier.</param>
-
-
         public void VerifyLastTransaction(double amount, int clientId)
         {
-            List<Stamp> matches = transactionHistory.Where(stamp => stamp.clientId == clientId).ToList();
-
-            if (!((matches[0].balance += amount) == matches[1].balance))
+            lock (transactionLock)
             {
-                numberOfErrors++;
-            }
+                List<Stamp> matches = transactionHistory.Where(stamp => stamp.clientId == clientId).ToList();
 
-            matches.RemoveAll(stamp => stamp.clientId == clientId);
+                if ((matches[0].balance += amount) != matches[1].balance)
+                {
+                    numberOfErrors++;
+                }
+                
+                transactionHistory.RemoveAll(stamp => stamp.clientId == clientId);
+            }
         }
     }
 }

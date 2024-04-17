@@ -9,22 +9,25 @@ namespace BankruptByBugs_part1
 {
     public class Client
     {
-        private int id;
+        public int id;
         private BankAccount bankAccount;
 
-        private double totalAmountTransactioned;
+        public double clientTotalAmountTransactioned;
 
-        private Random rand;
+        private Random rand = new Random();
 
-        public bool operating;
+        public bool operating = true;
         public bool useLock;
 
-        private object lockObject;
+        private object lockObject = new();
 
-        public Client(BankAccount bankAccount) 
+        private Controller controller;
+
+        public Client(BankAccount bankAccount, int id, Controller controller) 
         {
             this.bankAccount = bankAccount;
-            rand= new Random(); 
+            this.id = id;
+            this.controller = controller;
         }
 
         public void Run()
@@ -44,7 +47,10 @@ namespace BankruptByBugs_part1
                 {
                     Transaction(amount);
                 }
+                Thread.Sleep(10);
             }
+
+            controller.UpdateEventLogs($"Client: {id} is done.");
         }
 
         private void Transaction(double amount)
@@ -52,12 +58,14 @@ namespace BankruptByBugs_part1
             if (rand.NextDouble() >= 0.5)
             {
                 bankAccount.Deposit(amount, id);
-                totalAmountTransactioned += amount;
+                clientTotalAmountTransactioned += amount;
+                controller.UpdateEventLogs($"Client: {id} deposited {amount}");
             }
             else
             {
                 bankAccount.Withdaw(amount, id);
-                totalAmountTransactioned -= amount;
+                clientTotalAmountTransactioned -= amount;
+                controller.UpdateEventLogs($"Client: {id} withdrew {amount}");
             }
         }
     }

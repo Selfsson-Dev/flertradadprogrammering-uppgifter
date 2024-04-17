@@ -35,6 +35,7 @@
             buttonStart = new Button();
             buttonReset = new Button();
             buttonStop = new Button();
+            threadUseButton = new RadioButton();
             SuspendLayout();
             // 
             // eventListBox
@@ -56,13 +57,13 @@
             label1.Text = "Thread action logs";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
-            // output
+            // outputListBox
             // 
             outputListBox.FormattingEnabled = true;
             outputListBox.ItemHeight = 15;
             outputListBox.Location = new Point(437, 52);
-            outputListBox.Name = "output";
-            outputListBox.Size = new Size(338, 94);
+            outputListBox.Name = "outputListBox";
+            outputListBox.Size = new Size(519, 49);
             outputListBox.TabIndex = 2;
             // 
             // label2
@@ -105,11 +106,24 @@
             buttonStop.UseVisualStyleBackColor = true;
             buttonStop.Click += buttonStop_Click;
             // 
+            // threadUseButton
+            // 
+            threadUseButton.AutoSize = true;
+            threadUseButton.Location = new Point(437, 337);
+            threadUseButton.Name = "threadUseButton";
+            threadUseButton.Size = new Size(106, 19);
+            threadUseButton.TabIndex = 7;
+            threadUseButton.TabStop = true;
+            threadUseButton.Text = "Use thread lock";
+            threadUseButton.UseVisualStyleBackColor = true;
+            threadUseButton.CheckedChanged += radioButton1_CheckedChanged;
+            // 
             // BankruptByBugs
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(968, 450);
+            Controls.Add(threadUseButton);
             Controls.Add(buttonStop);
             Controls.Add(buttonReset);
             Controls.Add(buttonStart);
@@ -132,5 +146,6 @@
         private Button buttonStart;
         private Button buttonReset;
         private Button buttonStop;
+        private RadioButton threadUseButton;
     }
 }

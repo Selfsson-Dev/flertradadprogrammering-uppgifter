@@ -9,11 +9,11 @@ namespace BankruptByBugs_part1
 {
     public class BankAccount
     {
-        private double balance;
-        private Security security = new();
+        public double balance;
+        public Security security = new();
         private object lockTransaction = new object();
         public bool UseLock { get;  set; }
-        private int numberOfTransactions;
+        public int numberOfTransactions;
     
         public BankAccount() 
         {
