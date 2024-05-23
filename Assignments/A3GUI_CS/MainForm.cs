@@ -14,7 +14,7 @@ namespace Assignment3_Form
     {
         private SharedBuffer buffer;
         private Producer foodFactory, electronicsFactory, equipmentsFactory;
-        private Consumer ica, coop, power;
+        private Consumer ica, jula, power;
 
         /// <summary>
         /// Constructor.
@@ -39,6 +39,7 @@ namespace Assignment3_Form
             foodFactory = new Producer(buffer, lblStatusScan, CategoryType.Food);
             ThreadStart foodStart = new ThreadStart(foodFactory.StartProducing);
             Thread foodThread = new Thread(foodStart);
+            foodThread.Name = "foodProducer";
             foodThread.Start();
 
             btnStartScan.Enabled = false;
@@ -52,7 +53,14 @@ namespace Assignment3_Form
         /// <param name="e"></param>
         private void btnStartArla_Click(object sender, EventArgs e)
         {
- 
+            electronicsFactory = new Producer(buffer, lblStatusArla, CategoryType.Electronics);
+            ThreadStart electronicStart = new ThreadStart(electronicsFactory.StartProducing);
+            Thread electronicThread = new Thread(electronicStart);
+            electronicThread.Name = "electronicProducer";
+            electronicThread.Start();
+
+            btnStartArla.Enabled = false;
+            btnStopArla.Enabled = true;
         }
 
         /// <summary>
@@ -62,7 +70,14 @@ namespace Assignment3_Form
         /// <param name="e"></param>
         private void btnStartAxfood_Click(object sender, EventArgs e)
         {
- 
+            equipmentsFactory = new Producer(buffer, lblStatusAxfood, CategoryType.Equipment);
+            ThreadStart equipmentThreadStart = new ThreadStart(equipmentsFactory.StartProducing);
+            Thread equipmentThread = new Thread(equipmentThreadStart);
+            equipmentThread.Name = "equipmentProducer";
+            equipmentThread.Start();
+
+            btnStartAxfood.Enabled = false;
+            btnStopAxfood.Enabled = true;
         }
 
         /// <summary>
@@ -85,7 +100,10 @@ namespace Assignment3_Form
         /// <param name="e"></param>
         private void btnStopArla_Click(object sender, EventArgs e)
         {
- 
+            electronicsFactory.StopProducing();
+
+            btnStartArla.Enabled = true;
+            btnStopArla.Enabled = false;
         }
 
         /// <summary>
@@ -95,7 +113,12 @@ namespace Assignment3_Form
         /// <param name="e"></param>
         private void btnStopAxfood_Click(object sender, EventArgs e)
         {
-          }
+            equipmentsFactory.StopProducing();
+
+            btnStartAxfood.Enabled = true;
+            btnStopAxfood.Enabled = false;
+        }
+
         /// <summary>
         /// Start consumer 1
         /// </summary>
@@ -103,7 +126,14 @@ namespace Assignment3_Form
         /// <param name="e"></param>
         private void btnStartIca_Click(object sender, EventArgs e)
         {
- 
+            ica = new Consumer(buffer, lblIcaStatus, lblItems1, lstIca, 10, chkIcaCont);
+            ThreadStart icaStart = new ThreadStart(ica.StartConsuming);
+            Thread icaThread = new Thread(icaStart);
+
+            icaThread.Start();
+
+            btnStartIca.Enabled = false;
+            btnStopIca.Enabled = true;
         }
 
         /// <summary>
@@ -113,13 +143,10 @@ namespace Assignment3_Form
         /// <param name="e"></param>
         private void btnStopIca_Click(object sender, EventArgs e)
         {
-            
-            //Use the following patter to invoke updating of a control by other threads
-            //lblIcaStatus.Invoke((MethodInvoker)(() => lblIcaStatus.Text = 
-                   //xxThread.IsAlive ? "alive" : "dead"));
+            ica.StopConsuming();
 
-
-
+            btnStartIca.Enabled = true;
+            btnStopIca.Enabled = false;
         }
 
         /// <summary>
@@ -129,9 +156,30 @@ namespace Assignment3_Form
         /// <param name="e"></param>
         private void btnStartCoop_Click(object sender, EventArgs e)
         {
-  
+            power = new Consumer(buffer, lblCoopStatus, lblItems2, lstCoop, 12, chkCoopCont);
+            ThreadStart elgigantenStart = new ThreadStart(power.StartConsuming);
+            Thread powerThread = new Thread(elgigantenStart);
+            powerThread.Start();
+
+            btnStartCoop.Enabled = false;
+            btnStopCoop.Enabled = true;
         }
- 
+
+        private void chkIcaCont_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkCoopCont_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkCityCont_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void lstIca_SelectedIndexChanged(object sender, EventArgs e)
         {
            // lblIcaStatus.Invoke((MethodInvoker)(() => 
@@ -146,7 +194,11 @@ namespace Assignment3_Form
         /// <param name="e"></param>
         private void btnStopCoop_Click(object sender, EventArgs e)
         {
-          }
+            power.StopConsuming();
+
+            btnStartCoop.Enabled = true;
+            btnStopCoop.Enabled = false;
+        }
 
         /// <summary>
         /// Start consumer 3
@@ -155,8 +207,13 @@ namespace Assignment3_Form
         /// <param name="e"></param>
         private void btnStartCity_Click(object sender, EventArgs e)
         {
+            jula = new Consumer(buffer, lblCityStatus, lblItems3, lstCity, 8, chkCityCont);
+            ThreadStart julaStart = new ThreadStart(jula.StartConsuming);
+            Thread julaThread = new Thread(julaStart);
+            julaThread.Start();
 
-
+            btnStartCity.Enabled = false;
+            btnStopCity.Enabled = true;
         }
 
         /// <summary>
@@ -166,7 +223,10 @@ namespace Assignment3_Form
         /// <param name="e"></param>
         private void btnStopCity_Click(object sender, EventArgs e)
         {
-   
+            jula.StopConsuming();
+
+            btnStartCity.Enabled = true;
+            btnStopCity.Enabled = false;
         }
     }
 }

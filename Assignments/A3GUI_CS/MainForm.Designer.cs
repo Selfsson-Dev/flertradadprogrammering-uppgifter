@@ -89,11 +89,9 @@
             this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Location = new System.Drawing.Point(19, 20);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(343, 582);
+            this.groupBox1.Size = new System.Drawing.Size(229, 378);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Producers";
@@ -104,11 +102,9 @@
             this.groupBox6.Controls.Add(this.btnStartAxfood);
             this.groupBox6.Controls.Add(this.lblStatusAxfood);
             this.groupBox6.Controls.Add(this.label7);
-            this.groupBox6.Location = new System.Drawing.Point(9, 402);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox6.Location = new System.Drawing.Point(6, 261);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox6.Size = new System.Drawing.Size(325, 154);
+            this.groupBox6.Size = new System.Drawing.Size(217, 100);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Int Equipments";
@@ -116,10 +112,9 @@
             // btnStopAxfood
             // 
             this.btnStopAxfood.Enabled = false;
-            this.btnStopAxfood.Location = new System.Drawing.Point(224, 89);
-            this.btnStopAxfood.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStopAxfood.Location = new System.Drawing.Point(149, 58);
             this.btnStopAxfood.Name = "btnStopAxfood";
-            this.btnStopAxfood.Size = new System.Drawing.Size(72, 35);
+            this.btnStopAxfood.Size = new System.Drawing.Size(48, 23);
             this.btnStopAxfood.TabIndex = 3;
             this.btnStopAxfood.Text = "Stop";
             this.btnStopAxfood.UseVisualStyleBackColor = true;
@@ -127,10 +122,9 @@
             // 
             // btnStartAxfood
             // 
-            this.btnStartAxfood.Location = new System.Drawing.Point(44, 91);
-            this.btnStartAxfood.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStartAxfood.Location = new System.Drawing.Point(29, 59);
             this.btnStartAxfood.Name = "btnStartAxfood";
-            this.btnStartAxfood.Size = new System.Drawing.Size(148, 35);
+            this.btnStartAxfood.Size = new System.Drawing.Size(99, 23);
             this.btnStartAxfood.TabIndex = 2;
             this.btnStartAxfood.Text = "Start Producing";
             this.btnStartAxfood.UseVisualStyleBackColor = true;
@@ -139,20 +133,18 @@
             // lblStatusAxfood
             // 
             this.lblStatusAxfood.AutoSize = true;
-            this.lblStatusAxfood.Location = new System.Drawing.Point(120, 48);
-            this.lblStatusAxfood.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStatusAxfood.Location = new System.Drawing.Point(80, 31);
             this.lblStatusAxfood.Name = "lblStatusAxfood";
-            this.lblStatusAxfood.Size = new System.Drawing.Size(143, 20);
+            this.lblStatusAxfood.Size = new System.Drawing.Size(98, 13);
             this.lblStatusAxfood.TabIndex = 1;
             this.lblStatusAxfood.Text = "NOT PRODUCING";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(64, 48);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(43, 31);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 20);
+            this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 0;
             this.label7.Text = "Status:";
             // 
@@ -162,11 +154,9 @@
             this.groupBox5.Controls.Add(this.btnStartArla);
             this.groupBox5.Controls.Add(this.lblStatusArla);
             this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Location = new System.Drawing.Point(9, 214);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox5.Location = new System.Drawing.Point(6, 139);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox5.Size = new System.Drawing.Size(325, 154);
+            this.groupBox5.Size = new System.Drawing.Size(217, 100);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Home Electronics";
@@ -174,10 +164,9 @@
             // btnStopArla
             // 
             this.btnStopArla.Enabled = false;
-            this.btnStopArla.Location = new System.Drawing.Point(224, 89);
-            this.btnStopArla.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStopArla.Location = new System.Drawing.Point(149, 58);
             this.btnStopArla.Name = "btnStopArla";
-            this.btnStopArla.Size = new System.Drawing.Size(72, 35);
+            this.btnStopArla.Size = new System.Drawing.Size(48, 23);
             this.btnStopArla.TabIndex = 3;
             this.btnStopArla.Text = "Stop";
             this.btnStopArla.UseVisualStyleBackColor = true;
@@ -185,10 +174,9 @@
             // 
             // btnStartArla
             // 
-            this.btnStartArla.Location = new System.Drawing.Point(44, 91);
-            this.btnStartArla.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStartArla.Location = new System.Drawing.Point(29, 59);
             this.btnStartArla.Name = "btnStartArla";
-            this.btnStartArla.Size = new System.Drawing.Size(148, 35);
+            this.btnStartArla.Size = new System.Drawing.Size(99, 23);
             this.btnStartArla.TabIndex = 2;
             this.btnStartArla.Text = "Start Producing";
             this.btnStartArla.UseVisualStyleBackColor = true;
@@ -197,20 +185,18 @@
             // lblStatusArla
             // 
             this.lblStatusArla.AutoSize = true;
-            this.lblStatusArla.Location = new System.Drawing.Point(120, 48);
-            this.lblStatusArla.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStatusArla.Location = new System.Drawing.Point(80, 31);
             this.lblStatusArla.Name = "lblStatusArla";
-            this.lblStatusArla.Size = new System.Drawing.Size(143, 20);
+            this.lblStatusArla.Size = new System.Drawing.Size(98, 13);
             this.lblStatusArla.TabIndex = 1;
             this.lblStatusArla.Text = "NOT PRODUCING";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(64, 48);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(43, 31);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 20);
+            this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "Status:";
             // 
@@ -220,11 +206,9 @@
             this.groupBox4.Controls.Add(this.btnStartScan);
             this.groupBox4.Controls.Add(this.lblStatusScan);
             this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Location = new System.Drawing.Point(9, 29);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox4.Location = new System.Drawing.Point(6, 19);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox4.Size = new System.Drawing.Size(325, 154);
+            this.groupBox4.Size = new System.Drawing.Size(217, 100);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Food Factory";
@@ -232,10 +216,9 @@
             // btnStopScan
             // 
             this.btnStopScan.Enabled = false;
-            this.btnStopScan.Location = new System.Drawing.Point(224, 89);
-            this.btnStopScan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStopScan.Location = new System.Drawing.Point(149, 58);
             this.btnStopScan.Name = "btnStopScan";
-            this.btnStopScan.Size = new System.Drawing.Size(72, 35);
+            this.btnStopScan.Size = new System.Drawing.Size(48, 23);
             this.btnStopScan.TabIndex = 3;
             this.btnStopScan.Text = "Stop";
             this.btnStopScan.UseVisualStyleBackColor = true;
@@ -243,10 +226,9 @@
             // 
             // btnStartScan
             // 
-            this.btnStartScan.Location = new System.Drawing.Point(44, 91);
-            this.btnStartScan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStartScan.Location = new System.Drawing.Point(29, 59);
             this.btnStartScan.Name = "btnStartScan";
-            this.btnStartScan.Size = new System.Drawing.Size(148, 35);
+            this.btnStartScan.Size = new System.Drawing.Size(99, 23);
             this.btnStartScan.TabIndex = 2;
             this.btnStartScan.Text = "Start Producing";
             this.btnStartScan.UseVisualStyleBackColor = true;
@@ -255,20 +237,18 @@
             // lblStatusScan
             // 
             this.lblStatusScan.AutoSize = true;
-            this.lblStatusScan.Location = new System.Drawing.Point(120, 48);
-            this.lblStatusScan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStatusScan.Location = new System.Drawing.Point(80, 31);
             this.lblStatusScan.Name = "lblStatusScan";
-            this.lblStatusScan.Size = new System.Drawing.Size(143, 20);
+            this.lblStatusScan.Size = new System.Drawing.Size(98, 13);
             this.lblStatusScan.TabIndex = 1;
             this.lblStatusScan.Text = "NOT PRODUCING";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 48);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(43, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 20);
+            this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Status:";
             // 
@@ -277,11 +257,9 @@
             this.groupBox2.Controls.Add(this.groupBox11);
             this.groupBox2.Controls.Add(this.groupBox9);
             this.groupBox2.Controls.Add(this.groupBox7);
-            this.groupBox2.Location = new System.Drawing.Point(399, 20);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Location = new System.Drawing.Point(266, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(615, 582);
+            this.groupBox2.Size = new System.Drawing.Size(410, 378);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Consumers";
@@ -295,11 +273,9 @@
             this.groupBox11.Controls.Add(this.chkCityCont);
             this.groupBox11.Controls.Add(this.label16);
             this.groupBox11.Controls.Add(this.lblCityStatus);
-            this.groupBox11.Location = new System.Drawing.Point(28, 402);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox11.Location = new System.Drawing.Point(19, 261);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox11.Size = new System.Drawing.Size(577, 154);
+            this.groupBox11.Size = new System.Drawing.Size(385, 100);
             this.groupBox11.TabIndex = 2;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Food && tools";
@@ -307,9 +283,10 @@
             // lblItems3
             // 
             this.lblItems3.AutoSize = true;
-            this.lblItems3.Location = new System.Drawing.Point(181, 71);
+            this.lblItems3.Location = new System.Drawing.Point(121, 46);
+            this.lblItems3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItems3.Name = "lblItems3";
-            this.lblItems3.Size = new System.Drawing.Size(47, 20);
+            this.lblItems3.Size = new System.Drawing.Size(31, 13);
             this.lblItems3.TabIndex = 10;
             this.lblItems3.Text = "items";
             this.lblItems3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -317,20 +294,17 @@
             // lstCity
             // 
             this.lstCity.FormattingEnabled = true;
-            this.lstCity.ItemHeight = 20;
-            this.lstCity.Location = new System.Drawing.Point(234, 35);
-            this.lstCity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lstCity.Location = new System.Drawing.Point(156, 23);
             this.lstCity.Name = "lstCity";
-            this.lstCity.Size = new System.Drawing.Size(334, 104);
+            this.lstCity.Size = new System.Drawing.Size(224, 69);
             this.lstCity.TabIndex = 8;
             // 
             // btnStopCity
             // 
             this.btnStopCity.Enabled = false;
-            this.btnStopCity.Location = new System.Drawing.Point(166, 109);
-            this.btnStopCity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStopCity.Location = new System.Drawing.Point(111, 71);
             this.btnStopCity.Name = "btnStopCity";
-            this.btnStopCity.Size = new System.Drawing.Size(60, 35);
+            this.btnStopCity.Size = new System.Drawing.Size(40, 23);
             this.btnStopCity.TabIndex = 7;
             this.btnStopCity.Text = "Stop";
             this.btnStopCity.UseVisualStyleBackColor = true;
@@ -338,10 +312,9 @@
             // 
             // btnStartCity
             // 
-            this.btnStartCity.Location = new System.Drawing.Point(11, 109);
-            this.btnStartCity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStartCity.Location = new System.Drawing.Point(7, 71);
             this.btnStartCity.Name = "btnStartCity";
-            this.btnStartCity.Size = new System.Drawing.Size(122, 35);
+            this.btnStartCity.Size = new System.Drawing.Size(81, 23);
             this.btnStartCity.TabIndex = 6;
             this.btnStartCity.Text = "Start Loading";
             this.btnStartCity.UseVisualStyleBackColor = true;
@@ -350,31 +323,29 @@
             // chkCityCont
             // 
             this.chkCityCont.AutoSize = true;
-            this.chkCityCont.Location = new System.Drawing.Point(11, 70);
-            this.chkCityCont.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chkCityCont.Location = new System.Drawing.Point(7, 46);
             this.chkCityCont.Name = "chkCityCont";
-            this.chkCityCont.Size = new System.Drawing.Size(133, 24);
+            this.chkCityCont.Size = new System.Drawing.Size(91, 17);
             this.chkCityCont.TabIndex = 5;
             this.chkCityCont.Text = "Continue load";
             this.chkCityCont.UseVisualStyleBackColor = true;
+            this.chkCityCont.CheckedChanged += new System.EventHandler(this.chkCityCont_CheckedChanged);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(-1, 35);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(-1, 23);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 20);
+            this.label16.Size = new System.Drawing.Size(40, 13);
             this.label16.TabIndex = 4;
             this.label16.Text = "Status:";
             // 
             // lblCityStatus
             // 
             this.lblCityStatus.AutoSize = true;
-            this.lblCityStatus.Location = new System.Drawing.Point(54, 35);
-            this.lblCityStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCityStatus.Location = new System.Drawing.Point(36, 23);
             this.lblCityStatus.Name = "lblCityStatus";
-            this.lblCityStatus.Size = new System.Drawing.Size(144, 20);
+            this.lblCityStatus.Size = new System.Drawing.Size(99, 13);
             this.lblCityStatus.TabIndex = 3;
             this.lblCityStatus.Text = "NOT CONSUMING";
             // 
@@ -387,11 +358,9 @@
             this.groupBox9.Controls.Add(this.chkCoopCont);
             this.groupBox9.Controls.Add(this.label8);
             this.groupBox9.Controls.Add(this.lblCoopStatus);
-            this.groupBox9.Location = new System.Drawing.Point(28, 214);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox9.Location = new System.Drawing.Point(19, 139);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox9.Size = new System.Drawing.Size(577, 154);
+            this.groupBox9.Size = new System.Drawing.Size(385, 100);
             this.groupBox9.TabIndex = 1;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Coop Market";
@@ -399,9 +368,10 @@
             // lblItems2
             // 
             this.lblItems2.AutoSize = true;
-            this.lblItems2.Location = new System.Drawing.Point(182, 70);
+            this.lblItems2.Location = new System.Drawing.Point(121, 46);
+            this.lblItems2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItems2.Name = "lblItems2";
-            this.lblItems2.Size = new System.Drawing.Size(47, 20);
+            this.lblItems2.Size = new System.Drawing.Size(31, 13);
             this.lblItems2.TabIndex = 10;
             this.lblItems2.Text = "items";
             this.lblItems2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -409,20 +379,17 @@
             // lstCoop
             // 
             this.lstCoop.FormattingEnabled = true;
-            this.lstCoop.ItemHeight = 20;
-            this.lstCoop.Location = new System.Drawing.Point(245, 35);
-            this.lstCoop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lstCoop.Location = new System.Drawing.Point(163, 23);
             this.lstCoop.Name = "lstCoop";
-            this.lstCoop.Size = new System.Drawing.Size(321, 104);
+            this.lstCoop.Size = new System.Drawing.Size(215, 69);
             this.lstCoop.TabIndex = 8;
             // 
             // btnStopCoop
             // 
             this.btnStopCoop.Enabled = false;
-            this.btnStopCoop.Location = new System.Drawing.Point(166, 95);
-            this.btnStopCoop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStopCoop.Location = new System.Drawing.Point(111, 62);
             this.btnStopCoop.Name = "btnStopCoop";
-            this.btnStopCoop.Size = new System.Drawing.Size(60, 35);
+            this.btnStopCoop.Size = new System.Drawing.Size(40, 23);
             this.btnStopCoop.TabIndex = 7;
             this.btnStopCoop.Text = "Stop";
             this.btnStopCoop.UseVisualStyleBackColor = true;
@@ -430,10 +397,9 @@
             // 
             // btnStartCoop
             // 
-            this.btnStartCoop.Location = new System.Drawing.Point(22, 109);
-            this.btnStartCoop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStartCoop.Location = new System.Drawing.Point(15, 71);
             this.btnStartCoop.Name = "btnStartCoop";
-            this.btnStartCoop.Size = new System.Drawing.Size(122, 35);
+            this.btnStartCoop.Size = new System.Drawing.Size(81, 23);
             this.btnStartCoop.TabIndex = 6;
             this.btnStartCoop.Text = "Start Loading";
             this.btnStartCoop.UseVisualStyleBackColor = true;
@@ -442,31 +408,29 @@
             // chkCoopCont
             // 
             this.chkCoopCont.AutoSize = true;
-            this.chkCoopCont.Location = new System.Drawing.Point(22, 70);
-            this.chkCoopCont.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chkCoopCont.Location = new System.Drawing.Point(15, 46);
             this.chkCoopCont.Name = "chkCoopCont";
-            this.chkCoopCont.Size = new System.Drawing.Size(133, 24);
+            this.chkCoopCont.Size = new System.Drawing.Size(91, 17);
             this.chkCoopCont.TabIndex = 5;
             this.chkCoopCont.Text = "Continue load";
             this.chkCoopCont.UseVisualStyleBackColor = true;
+            this.chkCoopCont.CheckedChanged += new System.EventHandler(this.chkCoopCont_CheckedChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 35);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(7, 23);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 20);
+            this.label8.Size = new System.Drawing.Size(40, 13);
             this.label8.TabIndex = 4;
             this.label8.Text = "Status:";
             // 
             // lblCoopStatus
             // 
             this.lblCoopStatus.AutoSize = true;
-            this.lblCoopStatus.Location = new System.Drawing.Point(65, 35);
-            this.lblCoopStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCoopStatus.Location = new System.Drawing.Point(43, 23);
             this.lblCoopStatus.Name = "lblCoopStatus";
-            this.lblCoopStatus.Size = new System.Drawing.Size(144, 20);
+            this.lblCoopStatus.Size = new System.Drawing.Size(99, 13);
             this.lblCoopStatus.TabIndex = 3;
             this.lblCoopStatus.Text = "NOT CONSUMING";
             // 
@@ -479,11 +443,9 @@
             this.groupBox7.Controls.Add(this.chkIcaCont);
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Controls.Add(this.lblIcaStatus);
-            this.groupBox7.Location = new System.Drawing.Point(28, 29);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox7.Location = new System.Drawing.Point(19, 19);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox7.Size = new System.Drawing.Size(577, 154);
+            this.groupBox7.Size = new System.Drawing.Size(385, 100);
             this.groupBox7.TabIndex = 0;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Gen Groceries";
@@ -491,9 +453,10 @@
             // lblItems1
             // 
             this.lblItems1.AutoSize = true;
-            this.lblItems1.Location = new System.Drawing.Point(181, 59);
+            this.lblItems1.Location = new System.Drawing.Point(121, 38);
+            this.lblItems1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItems1.Name = "lblItems1";
-            this.lblItems1.Size = new System.Drawing.Size(47, 20);
+            this.lblItems1.Size = new System.Drawing.Size(31, 13);
             this.lblItems1.TabIndex = 9;
             this.lblItems1.Text = "items";
             this.lblItems1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -501,21 +464,18 @@
             // lstIca
             // 
             this.lstIca.FormattingEnabled = true;
-            this.lstIca.ItemHeight = 20;
-            this.lstIca.Location = new System.Drawing.Point(245, 24);
-            this.lstIca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lstIca.Location = new System.Drawing.Point(163, 16);
             this.lstIca.Name = "lstIca";
-            this.lstIca.Size = new System.Drawing.Size(321, 104);
+            this.lstIca.Size = new System.Drawing.Size(215, 69);
             this.lstIca.TabIndex = 8;
             this.lstIca.SelectedIndexChanged += new System.EventHandler(this.lstIca_SelectedIndexChanged);
             // 
             // btnStopIca
             // 
             this.btnStopIca.Enabled = false;
-            this.btnStopIca.Location = new System.Drawing.Point(166, 98);
-            this.btnStopIca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStopIca.Location = new System.Drawing.Point(111, 64);
             this.btnStopIca.Name = "btnStopIca";
-            this.btnStopIca.Size = new System.Drawing.Size(60, 35);
+            this.btnStopIca.Size = new System.Drawing.Size(40, 23);
             this.btnStopIca.TabIndex = 7;
             this.btnStopIca.Text = "Stop";
             this.btnStopIca.UseVisualStyleBackColor = true;
@@ -523,10 +483,9 @@
             // 
             // btnStartIca
             // 
-            this.btnStartIca.Location = new System.Drawing.Point(22, 98);
-            this.btnStartIca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStartIca.Location = new System.Drawing.Point(15, 64);
             this.btnStartIca.Name = "btnStartIca";
-            this.btnStartIca.Size = new System.Drawing.Size(122, 35);
+            this.btnStartIca.Size = new System.Drawing.Size(81, 23);
             this.btnStartIca.TabIndex = 6;
             this.btnStartIca.Text = "Start Loading";
             this.btnStartIca.UseVisualStyleBackColor = true;
@@ -535,31 +494,29 @@
             // chkIcaCont
             // 
             this.chkIcaCont.AutoSize = true;
-            this.chkIcaCont.Location = new System.Drawing.Point(22, 59);
-            this.chkIcaCont.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chkIcaCont.Location = new System.Drawing.Point(15, 38);
             this.chkIcaCont.Name = "chkIcaCont";
-            this.chkIcaCont.Size = new System.Drawing.Size(133, 24);
+            this.chkIcaCont.Size = new System.Drawing.Size(91, 17);
             this.chkIcaCont.TabIndex = 5;
             this.chkIcaCont.Text = "Continue load";
             this.chkIcaCont.UseVisualStyleBackColor = true;
+            this.chkIcaCont.CheckedChanged += new System.EventHandler(this.chkIcaCont_CheckedChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 24);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(7, 16);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 20);
+            this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 4;
             this.label6.Text = "Status:";
             // 
             // lblIcaStatus
             // 
             this.lblIcaStatus.AutoSize = true;
-            this.lblIcaStatus.Location = new System.Drawing.Point(65, 24);
-            this.lblIcaStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIcaStatus.Location = new System.Drawing.Point(43, 16);
             this.lblIcaStatus.Name = "lblIcaStatus";
-            this.lblIcaStatus.Size = new System.Drawing.Size(144, 20);
+            this.lblIcaStatus.Size = new System.Drawing.Size(99, 13);
             this.lblIcaStatus.TabIndex = 3;
             this.lblIcaStatus.Text = "NOT CONSUMING";
             // 
@@ -568,11 +525,9 @@
             this.groupBox3.Controls.Add(this.lblItemsProduced);
             this.groupBox3.Controls.Add(this.progressItems);
             this.groupBox3.Controls.Add(this.lblMax);
-            this.groupBox3.Location = new System.Drawing.Point(19, 612);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Location = new System.Drawing.Point(13, 398);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Size = new System.Drawing.Size(994, 126);
+            this.groupBox3.Size = new System.Drawing.Size(663, 82);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Storage";
@@ -580,9 +535,10 @@
             // lblItemsProduced
             // 
             this.lblItemsProduced.AutoSize = true;
-            this.lblItemsProduced.Location = new System.Drawing.Point(892, 24);
+            this.lblItemsProduced.Location = new System.Drawing.Point(595, 16);
+            this.lblItemsProduced.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemsProduced.Name = "lblItemsProduced";
-            this.lblItemsProduced.Size = new System.Drawing.Size(80, 20);
+            this.lblItemsProduced.Size = new System.Drawing.Size(54, 13);
             this.lblItemsProduced.TabIndex = 9;
             this.lblItemsProduced.Text = "Max items";
             this.lblItemsProduced.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -590,33 +546,30 @@
             // progressItems
             // 
             this.progressItems.ForeColor = System.Drawing.Color.Blue;
-            this.progressItems.Location = new System.Drawing.Point(233, 58);
-            this.progressItems.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.progressItems.Location = new System.Drawing.Point(155, 38);
             this.progressItems.Maximum = 20;
             this.progressItems.Name = "progressItems";
-            this.progressItems.Size = new System.Drawing.Size(735, 35);
+            this.progressItems.Size = new System.Drawing.Size(490, 23);
             this.progressItems.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressItems.TabIndex = 2;
             // 
             // lblMax
             // 
             this.lblMax.AutoSize = true;
-            this.lblMax.Location = new System.Drawing.Point(9, 65);
-            this.lblMax.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMax.Location = new System.Drawing.Point(6, 42);
             this.lblMax.Name = "lblMax";
-            this.lblMax.Size = new System.Drawing.Size(156, 20);
+            this.lblMax.Size = new System.Drawing.Size(106, 13);
             this.lblMax.TabIndex = 1;
             this.lblMax.Text = "Max capacity (items):";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 749);
+            this.ClientSize = new System.Drawing.Size(689, 487);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Food Supply System";
