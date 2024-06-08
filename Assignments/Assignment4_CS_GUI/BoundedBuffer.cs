@@ -23,7 +23,7 @@ public class BoundedBuffer
 
     public bool Write(List<string> data)
     {
-        Monitor.Enter(_lock); // Acquire the lock
+        Monitor.Enter(_lock);
         try
         {
             while (rowStatuses[writePos] != BufferStatus.Empty) Monitor.Wait(_lock);
@@ -41,7 +41,7 @@ public class BoundedBuffer
         }
         finally
         {
-            Monitor.Exit(_lock); // Ensure lock release, even after exceptions
+            Monitor.Exit(_lock);
         }
     }
 
@@ -61,7 +61,7 @@ public class BoundedBuffer
         }
         finally
         {
-            Monitor.Exit(_lock); // Ensure lock release, even after exceptions
+            Monitor.Exit(_lock);
         }
     }
 
@@ -73,7 +73,7 @@ public class BoundedBuffer
     /// <returns></returns>
     public string Read()
     {
-        Monitor.Enter(_lock); // Acquire the lock
+        Monitor.Enter(_lock);
         try
         {
             while (rowStatuses[readPos] != BufferStatus.Checked)
@@ -88,7 +88,7 @@ public class BoundedBuffer
         }
         finally
         {
-            Monitor.Exit(_lock); // Ensure lock release, even after exceptions
+            Monitor.Exit(_lock);
         }
     }
 }
